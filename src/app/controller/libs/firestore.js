@@ -2,12 +2,13 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
 
 const config = {
-    apiKey: "AIzaSyBN3STG3gD2pud9bepRXgxvgfrSr-h_PBU",
-    authDomain: "pickbanpro.firebaseapp.com",
-    projectId: "pickbanpro",
-    storageBucket: "pickbanpro.appspot.com",
-    messagingSenderId: "215885574991",
-    appId: "1:215885574991:web:c7d4a84aa1be3d72e40b3a"
+    apiKey: "AIzaSyD541eUtTNIkZB1GLTwmG5DmNqfYN3_XPw",
+    authDomain: "banpick-820e5.firebaseapp.com",
+    projectId: "banpick-820e5",
+    storageBucket: "banpick-820e5.appspot.com",
+    messagingSenderId: "776443357600",
+    appId: "1:776443357600:web:721d5d8619c2208d90dcc5",
+    measurementId: "G-5W0SB3313Q"
 };
 
 const firebaseApp = initializeApp(config);
