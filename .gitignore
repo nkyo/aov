@@ -19,8 +19,6 @@
 .env.test.local
 .env.production.local
 
-# assets
-/src/app/assets/fonts
 
 npm-debug.log*
 yarn-debug.log*

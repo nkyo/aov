@@ -17,7 +17,7 @@ const db = getFirestore();
 
 // @TODO - remove below in prod
 // use emulator
-connectFirestoreEmulator(db, 'localhost', 8080);
+// connectFirestoreEmulator(db, 'localhost', 8080);
 
 export default db;
 
