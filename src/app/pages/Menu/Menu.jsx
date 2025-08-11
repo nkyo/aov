@@ -9,26 +9,21 @@ const Menu = ({ setNav }) => {
 	return (
 		<div className={cn.container}>
 			<div className={cn['selection--holder']}>
-				<h1>formats</h1>
 				<Link to='/practice' className={clsx(cn.test, 'card__component')}>
 					<div className={clsx(cn.selection, cn.test)}>
 						<h2>Practice.</h2>
-						<span>(Single-player + spectators)</span>
+						<span>(BTC điều phối)</span>
 						<p>
-							Play around with a tournament draft pro teams use
-							with / without time limits and invite spectators to
-							watch your drafts.
+BTC cấm chọn theo yêu cầu
 						</p>
 					</div>
 				</Link>
 				<Link to='/challenge' className={clsx(cn.draft, 'card__component')}>
 					<div className={clsx(cn.selection, cn.draft)}>
-						<h2>Draft.</h2>
-						<span>(2 players + spectators)</span>
+						<h2>Giải đấu.</h2>
+						<span>(2 Teams + BTC)</span>
 						<p>
-							[BETA] Participate in a mock draft with another
-							coach with a generated link with custom settings.
-							Spectator links will also be available.
+Mỗi đội sẽ có trang cấm và chọn riêng.
 						</p>
 					</div>
 				</Link>

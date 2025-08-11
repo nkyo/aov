@@ -5,9 +5,9 @@ import './ChampionPick.scss';
 const transparentImageBase64 =
 	'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
-const ChampionPick = ({ className, name, num, isBlue  }) => {
+const ChampionPick = ({ className, name, id, num, isBlue  }) => {
 	const iconSource = num
-		? `https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-splashes/${num}/${num}000.jpg`
+		? `https://esport.matbao.support/img/${id}.png`
 		: transparentImageBase64;
         
 	return (
@@ -22,12 +22,13 @@ const ChampionPick = ({ className, name, num, isBlue  }) => {
 				className='pick'
 				style={{
 					backgroundImage: `url('${iconSource}')`,
-					backgroundPosition: `12% 12%`,
-                    backgroundSize: '140%',
-                    backgroundRepeat: 'no-repeat'
+					backgroundPosition: `100% 12%`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'contains'
+
 				}}
 			>
-				<span>Picking...</span>
+				<span>Đang chọn...</span>
 				<h3>{name}</h3>
 			</div>
 		</div>

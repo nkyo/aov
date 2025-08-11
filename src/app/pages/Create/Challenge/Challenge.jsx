@@ -34,31 +34,31 @@ const Challenge = () => {
 				className={clsx(cn.content, 'card__component')}
 				onSubmit={handleSubmit}
 			>
-				<h1>Options</h1>
+				<h2>Thiết lập</h2>
 				<span>
 					{areOptionsFinalized
 						? 'Options are set. Use the links to draft'
-						: 'You must finalize options before drafting'}
+						: ''}
 				</span>
 				<div>
 					<NameInput
 						disabled={areOptionsFinalized}
 						name='Match'
-						example='Worlds 2021'
+						example='Show Match'
 						value={matchName}
 						setValue={setMatchName}
 					/>
 					<NameInput
 						disabled={areOptionsFinalized}
 						name='Blue'
-						example='Cloud 9'
+						example='Mắt Bão'
 						value={blueTeamName}
 						setValue={setBlueTeamName}
 					/>
 					<NameInput
 						disabled={areOptionsFinalized}
 						name='Red'
-						example='Damwon Gaming'
+						example='SKT'
 						value={redTeamName}
 						setValue={setRedTeamName}
 					/>
@@ -69,7 +69,7 @@ const Challenge = () => {
 							setHasAdvancedOptions(prev => !prev);
 						}}
 					>
-						<p>Advanced Options</p>
+						<p>Nâng cao</p>
 						{
 							hasAdvancedOptions 
 								? <ExpandLessIcon />
@@ -78,7 +78,7 @@ const Challenge = () => {
 					</div>
 					{hasAdvancedOptions && (
 						<div className={cn['time-limits']}>
-							<label htmlFor='timer'>Set Time Limits:</label>
+							<label htmlFor='timer'>Giới hạn thời gian:</label>
 							<Toggle
 								id={cn.timer}
 								icons={false}
@@ -92,7 +92,7 @@ const Challenge = () => {
 							{hasTimeLimits && (
 								<>
 									<label className='seconds' htmlFor='timer'>
-										Seconds per pick:
+										Thời gian mỗi lượt:
 									</label>
 									<ControlledTextInput
 										disabled={areOptionsFinalized}
@@ -107,8 +107,8 @@ const Challenge = () => {
 				</div>
 				<button disabled={areOptionsFinalized}>
 					{areOptionsFinalized
-						? 'Match is ready!'
-						: 'Finalize Options'}
+						? 'Chuẩn bị!'
+						: 'Bắt đầu'}
 				</button>
 			</form>
 			<div className={clsx(cn['link-holder'], 'card__component')}>

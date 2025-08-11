@@ -8,7 +8,7 @@
         z-index: 1;
         top: 50%;
         left: 50%;
-        font: 3.2em 'Hyperwave';
+        font: 1.5em 'Hyperwave';
         transform: translate(-50%, -50%);
         text-align: center;
         line-height: 2rem;
@@ -34,7 +34,6 @@
     }
 
     &>span {
-        font-family: 'Rubik';
         position: absolute;
         bottom: 5px;
         left: 50%;

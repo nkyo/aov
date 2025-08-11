@@ -15,7 +15,7 @@ const DraftSettings = ({
 		<div className={clsx('draft-settings--wrapper', className)}>
 			<div className='time-limits'>
 				<h3>Timer</h3>
-				<label htmlFor='timer'>Set Time Limits:</label>
+				<label htmlFor='timer'>Giới hạn thời gian:</label>
 				<Toggle
 					id='timer'
 					icons={false}
@@ -26,7 +26,7 @@ const DraftSettings = ({
 				{hasTimeLimits && (
 					<>
 						<label className='seconds' htmlFor='timer'>
-							Seconds per pick:
+							Thời gian mỗi lượt:
 						</label>
 						<ControlledTextInput
 							id='time-limit'

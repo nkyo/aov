@@ -9,7 +9,9 @@
     @media screen and (max-width: 1200px) {
         font-size: 0.7em;
     }
-
+.dual-pick {
+    background-color: #51b1b170;
+}
     &.currently-picking {
         &>.pick {
             height: calc((100% - 200px)/5 - 2px);

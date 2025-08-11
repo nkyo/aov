@@ -17,8 +17,10 @@ const Navbar = ({ type, time, limit, end, side, names }) => {
 
     if (!type) return (
         <nav className={cn.container}>
-            <Link to="/" className={cn.name}><Logo /></Link>
-            <h1>pickban.pro</h1>
+            <Link to="/" className={cn.name}>            <img
+				src="https://sportday.support247.top/wp-content/uploads/2022/07/MicrosoftTeams-image-2048x374.png"
+                width={400}
+			/></Link>
         </nav>
     );
 
@@ -30,10 +32,14 @@ const Navbar = ({ type, time, limit, end, side, names }) => {
 
     return (
         <nav className={clsx(cn.container, cn['with-bar'])}>
-            <Link to="/" className={cn.name}><Logo /></Link>
+            
             <h2 className={clsx(cn.blue, isBlue && cn.active)}>{names.blue}</h2>
             <p className={cn.blue}>{blueTimer}</p>
-            <h1>{names.match}</h1>
+            <h1><Link to="/"><img
+				src="https://sportday.support247.top/wp-content/uploads/2022/07/MicrosoftTeams-image-2048x374.png"
+                width={300}
+                className='logo-to-vcl'
+			/></Link></h1>
             <p className={cn.red}>{redTimer}</p>
             <h2 className={clsx(cn.red, isRed && cn.active)}>{names.red}</h2>
         </nav>

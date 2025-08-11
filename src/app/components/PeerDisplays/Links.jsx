@@ -16,20 +16,20 @@ const Links = ({ roomid, blue, red, className }) => {
 			<span>
 				{!(blue && red)
 					? 'Let people watch you as you draft'
-					: 'Play against a friend and invite people to watch'}
+					: 'Gửi tới đội trưởng mỗi đội để ban-pick'}
 			</span>
 
 			{blue && red && (
 				<>
 					<div className={cn['action-container']}>
 						<label htmlFor={cn['blue-link']} className={cn.blue}>
-							Blue Side
+							Đội Xanh
 						</label>
 					</div>
 					<LinkText href={blueLink} id={cn['blue-link']} />
 
 					<label htmlFor={cn['red-link']} className={cn.red}>
-						Red Side 
+						Đội Đỏ 
 					</label>
 					<LinkText href={redLink} id={cn['red-link']} />
 				</>
@@ -38,7 +38,7 @@ const Links = ({ roomid, blue, red, className }) => {
 			<div className={cn.hr}></div>
 
 			<label htmlFor={cn['spectator-link']}>
-				Spectator <span>to watch</span>
+				Khán giá / Ban Tổ Chức <span>theo dõi</span>
 			</label>
 			<LinkText href={specLink} id={cn['spectator-link']} />
 			{blue && red && (

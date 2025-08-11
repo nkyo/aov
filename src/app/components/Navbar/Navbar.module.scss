@@ -1,3 +1,6 @@
+.logo-to-vcl{
+    margin-top: 15px;
+}
 nav.container {
     box-sizing: border-box;
     position: sticky;
@@ -61,7 +64,7 @@ nav.container {
     }
 
     &>h2 {
-        font: 2em 'Arvo', serif;
+        font-size: 2em;
         padding-top: 10px;
         color: grey;
         white-space: nowrap;
@@ -89,7 +92,7 @@ nav.container {
     }
 
     &>p {
-        font: 2.8em 'Arvo', serif;
+        font-size: 2.8em;
         display: grid;
         place-content: center;
 

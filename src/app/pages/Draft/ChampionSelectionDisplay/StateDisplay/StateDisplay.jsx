@@ -1,4 +1,5 @@
 import { useContext, useRef, useEffect, memo } from 'react';
+import { useState } from 'react';
 import ChampionsContext from '../../../../controller/contexts/ChampionsContext';
 import {
 	PICKS,
@@ -48,7 +49,7 @@ const StateDisplay = ({
 		if (championsList === null || !selectedID) {
 			if (type === 'spectator') return '---';
 			if (property === 'name') return '---';
-			return 'Select a champion';
+			return 'Chọn tướng';
 		}
 		if (selectedID === 'none') return 'None';
 		return championsList[selectedID][property];
@@ -59,18 +60,18 @@ const StateDisplay = ({
 			DRAFT_IS_FINISHED = p >= 20;
 
 		if (DRAFT_NOT_STARTED) return '---';
-		if (DRAFT_IS_FINISHED) return 'Finished';
+		if (DRAFT_IS_FINISHED) return "Hoàn tất";
 
 		if (type === 'spectator') return '---';
-		if (PICKS.has(p)) return 'Picking...';
-		return 'Banning...';
+		if (PICKS.has(p)) return 'Đang chọn...';
+		return 'Đang cấm...';
 	};
 
 	const displayTitleText = () => {
 		const DRAFT_NOT_STARTED = p <= -1,
 			DRAFT_IS_FINISHED = p >= 20;
 
-		if (DRAFT_IS_FINISHED) return 'Finished';
+		if (DRAFT_IS_FINISHED) return 'Hoàn tất';
 
 		if (type === 'blue' || type === 'red') {
 			const isCurrentPlayerTurn = BLUE_SIDE_PICKS.has(p)
@@ -79,23 +80,23 @@ const StateDisplay = ({
 
 			if (DRAFT_NOT_STARTED) {
 				if (!ready[type === 'blue' ? 0 : 1])
-					return 'Click [READY] to ready up';
-				return 'Waiting for enemy to ready up';
+					return 'Bấm [Chuẩn Bị] khi bạn đã sẵn sàng';
+				return 'Vui lòng đợi đội đối thủ';
 			}
 			if (PICKS.has(p)) {
-				if (isCurrentPlayerTurn) return 'Pick a champion';
-				return 'Waiting for enemy pick';
+				if (isCurrentPlayerTurn) return 'Chọn tướng';
+				return 'Đợi đối thủ chọn tướng';
 			}
-			if (isCurrentPlayerTurn) return 'Ban a champion';
-			return 'Waiting for enemy ban';
+			if (isCurrentPlayerTurn) return 'Cấm tướng';
+			return 'Đợi đối thủ cấm tướng';
 		}
 
 		if (DRAFT_NOT_STARTED)
-			return type === 'spectator' ? 'Waiting for teams to ready...' : 'Click [START] to begin';
+			return type === 'spectator' ? 'Vui lòng đợi...' : 'Bấm [chuẩn bị] khi bạn đã sẵn sàng';
 
-		const TEAM_TO_MOVE = BLUE_SIDE_PICKS.has(p) ? 'Blue Team' : 'Red Team';
+		const TEAM_TO_MOVE = BLUE_SIDE_PICKS.has(p) ? 'Đội xanh' : 'Đội đỏ';
 
-		return TEAM_TO_MOVE + (PICKS.has(p) ? ' pick' : ' bann') + 'ing...';
+		return TEAM_TO_MOVE + (PICKS.has(p) ? ' đang chọn' : ' đang cấm') + '...';
 	};
 
 	return (

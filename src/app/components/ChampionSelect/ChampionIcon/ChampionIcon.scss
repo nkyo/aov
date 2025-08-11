@@ -19,6 +19,8 @@ button.champion-icon--wrapper {
         text-align: center;
         width: 100%;
         font-size: 0.9rem;
+        text-transform: capitalize;
+        margin-top: 10px;
     }
     &:disabled {
         filter: grayscale(1);

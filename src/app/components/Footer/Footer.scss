@@ -1,12 +1,12 @@
 footer {
-    position: relative;
+    display: none;
     z-index: 150;
-    height: 100vh;
+    height: 1vh;
     text-align: center;
     background-color: var(--bg-primary-dark);
     transition: background-color 500ms;
     & > .portfolio{
-        display: grid;
+        display: none;
         place-content: center;
         height: 100%;
         text-align: center;
@@ -23,7 +23,7 @@ footer {
     }
     & .made-with{
         position: absolute;
-        width: 100%;
+        width: 10%;
         bottom: 30px;
         font: 1em 'Poppins';
         text-align: center;

@@ -13,32 +13,32 @@ const cases = [
         {},
         undefined,
         {
-            match: 'pickban.pro',
-            blue: 'Blue Team',
-            red: 'Red Team',
+            match: '<img src="https://sportday.support247.top/wp-content/uploads/2022/07/MicrosoftTeams-image-2048x374.png" width="400px"/>',
+            blue: 'Đội xanh',
+            red: 'Đội đỏ',
         }
     ],
     [
         {
-            teamNames: 'Cloud 9,DWG KIA',
+            teamNames: 'Mat Bao,SKT',
         },
         undefined,
         {
-            match: 'pickban.pro',
-            blue: 'Cloud 9',
-            red: 'DWG KIA',
+            match: '<img src="https://sportday.support247.top/wp-content/uploads/2022/07/MicrosoftTeams-image-2048x374.png" width="400px"/>',
+            blue: 'Mat Bao',
+            red: 'SKT',
         }
     ],
     [
         {
             matchName: 'MSI 2021',
-            teamNames: 'Cloud 9,DWG KIA',
+            teamNames: 'Mat Bao,SKT',
         },
         undefined,
         {
             match: 'MSI 2021',
-            blue: 'Cloud 9',
-            red: 'DWG KIA',
+            blue: 'Mat Bao',
+            red: 'SKT',
         }
     ],
     [
@@ -46,12 +46,12 @@ const cases = [
         {
             match: 'LCS Spring 2021',
             blue: 'Team Liquid',
-            red: 'Cloud 9'
+            red: 'Mat Bao'
         },
         {
             match: 'LCS Spring 2021',
             blue: 'Team Liquid',
-            red: 'Cloud 9',
+            red: 'Mat Bao',
         }
     ],
 ];

@@ -13,11 +13,11 @@ const ControlsDisplay = ({
 }) => {
 	const mainButtonText = () => {
 		if (draft.p <= -1)
-			return type === 'blue' || type === 'red' ? 'ready' : 'start';
+			return type === 'blue' || type === 'red' ? 'ready' : 'Chuẩn bị';
             
 		if (draft.p >= 20) return '';
 
-		return PICKS.has(draft.p) ? 'lock in' : 'ban';
+		return PICKS.has(draft.p) ? 'Khóa' : 'Cấm';
 	};
 
 	return (
@@ -29,21 +29,6 @@ const ControlsDisplay = ({
 				disabled={draft.p !== -1 && !draft.d[draft.p]}
 			>
 				{mainButtonText()}
-			</button>
-			<button
-				className={clsx('settings', showOptions && 'active')}
-				onClick={() => {
-					setShowOptions(prevOption => !prevOption);
-				}}
-			>
-				<SettingsIcon />
-			</button>
-			<button
-				className='undo'
-				onClick={actions.undo}
-				disabled={draft.p <= 0}
-			>
-				undo
 			</button>
 		</div>
 	);

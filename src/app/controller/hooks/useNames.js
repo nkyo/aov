@@ -1,9 +1,9 @@
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 
-const DEFAULT_MATCH_NAME = 'pickban.pro';
-const DEFAULT_BLUE_NAME = 'Blue Team';
-const DEFAULT_RED_NAME = 'Red Team';
+const DEFAULT_MATCH_NAME = 'Mat Bao Esports';
+const DEFAULT_BLUE_NAME = 'Đội Xanh';
+const DEFAULT_RED_NAME = 'Đội Đỏ';
 
 const DEFAULT_NAME_OBJECT = {
     match: DEFAULT_MATCH_NAME,

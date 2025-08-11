@@ -10,7 +10,7 @@ const ChampionBan = ({ name, id, currentPick }) => {
 	const iconSource = id
 		? id === 'none'
 			? EmptyBanImage
-			: `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`
+			: `https://esport.matbao.support/img/${id}.png`
 		: transparentImageBase64;
 
 	const isLongName = name => {
@@ -34,7 +34,7 @@ const ChampionBan = ({ name, id, currentPick }) => {
                 className={cn['no-image']}
 			/>
 			<img src={iconSource} alt={name} style={{ opacity: id ? 1 : 0 }} />
-			{currentPick && <span>BANNING</span>}
+			{currentPick && <span>ĐANG CẤM</span>}
 		</div>
 	);
 };

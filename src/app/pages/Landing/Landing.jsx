@@ -7,7 +7,10 @@ const Landing = () => {
             <header>
                 <div className="splash-decoration">
                     <div>
-                        <h1>pick ban pro</h1>
+                    <img
+				src="https://sportday.support247.top/wp-content/uploads/2022/07/MicrosoftTeams-image-2048x374.png"
+                width={400}
+			/>
                     </div>
                 </div>
                 <Link to="/menu" className="start">START</Link>

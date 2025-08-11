@@ -42,11 +42,18 @@ const ChampSelect = ({ className, select, disabled, hasNoneOption }) => {
 	useEffect(() => {
 		if (filteredChampionsList === null) return;
 
-		let championsKeys = Object.keys(filteredChampionsList).sort((a, b) =>
-			filteredChampionsList[a].name.localeCompare(
-				filteredChampionsList[b].name
-			)
-		);
+		let championsKeys = Object.keys(filteredChampionsList).sort((a, b) => {
+			// Check if a's name is undefined
+			if (typeof filteredChampionsList[a].name === "undefined") {
+				return 1; // Move a to the end
+			}
+			// Check if b's name is undefined
+			if (typeof filteredChampionsList[b].name === "undefined") {
+				return -1; // Move b to the end
+			}
+			// If both names are defined, compare them
+			return filteredChampionsList[a].name.localeCompare(filteredChampionsList[b].name);
+		});
 		let sortedChampionData = championsKeys.map(championID => {
 			const { id, name, title, tags } = filteredChampionsList[championID];
 			return { id, name, title, tags };

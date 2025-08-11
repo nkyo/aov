@@ -16,19 +16,18 @@
     &>.pick {
         height: 100%;
         transition: border-width 350ms;
-        background-size: cover;
+        background-size: contain;
         transition: filter 350ms;
         &>h3 {
             position: absolute;
             bottom: 0px;
-            font: 4em 'Hyperwave';
+            font: 2em 'Hyperwave';
             color: white;
             text-shadow: 2px 2px 1px var(--elevation-shadow);
             transition: color 350ms;
         }
         &>span {
             display: none;
-            font-family: 'Rubik';
             position: absolute;
             bottom: 2.2em;
             text-shadow: 1px 1px 2px  var(--elevation-shadow);

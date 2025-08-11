@@ -58,11 +58,11 @@ const Practice = ({ peerID, connection, challenge, spectators }) => {
 	return (
 		<div className={cn.container}>
 			<form className={clsx(cn.content, 'card__component')} onSubmit={handleSubmit}>
-				<h1>Options</h1>
+				<h2>Options</h2>
 				<span>(You can change these during draft)</span>
 				<div>
 					<label htmlFor='match-name'>
-						Match Name: <span>(optional)</span>
+						Tên giải đấu: <span></span>
 					</label>
 					<ControlledTextInput
 						id='match-name'
@@ -72,7 +72,7 @@ const Practice = ({ peerID, connection, challenge, spectators }) => {
 					/>
 
 					<label htmlFor='blue-team-name'>
-						Blue Team Name: <span>(optional)</span>
+						Đội Xanh: <span></span>
 					</label>
 					<ControlledTextInput
 						id='blue-team-name'
@@ -82,7 +82,7 @@ const Practice = ({ peerID, connection, challenge, spectators }) => {
 					/>
 
 					<label htmlFor='red-team-name'>
-						Red Team Name: <span>(optional)</span>
+						Đội đỏ: <span></span>
 					</label>
 					<ControlledTextInput
 						id='red-team-name'
@@ -92,7 +92,7 @@ const Practice = ({ peerID, connection, challenge, spectators }) => {
 					/>
 
 					<div className={cn['time-limits']}>
-						<label htmlFor='timer'>Set Time Limits:</label>
+						<label htmlFor='timer'>Giới hạn thời gian:</label>
 						<Toggle
 							id='timer'
 							icons={false}
@@ -105,7 +105,7 @@ const Practice = ({ peerID, connection, challenge, spectators }) => {
 						{hasTimeLimits && (
 							<>
 								<label className={cn.seconds} htmlFor='timer'>
-									Seconds per pick:
+								Thời gian mỗi lượt:
 								</label>
 								<ControlledTextInput
 									id='time-limit'
@@ -116,7 +116,7 @@ const Practice = ({ peerID, connection, challenge, spectators }) => {
 						)}
 					</div>
 				</div>
-				<button>Start</button>
+				<button>Bắt đầu</button>
 			</form>
 			<div className={clsx(cn['link-holder'], 'card__component')}>
 				<Links
